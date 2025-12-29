@@ -1,0 +1,12 @@
+
+<%- include('partials/header.ejs') %>
+
+ <h2>Editando: <%= post.titulo %></h2>
+
+ 
+<form action="/post/<%= id %>?_method=put" method="post">
+  <textarea name="texto" rows="20" cols="30"><%= post.texto %></textarea>
+  <button type="submit">Save Changes</button>
+</form>
+
+<%- include('partials/footer.ejs') %>
